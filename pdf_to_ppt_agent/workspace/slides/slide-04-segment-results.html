@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  html { background: #FFFFFF; }
+  body {
+    width: 720pt; height: 405pt; margin: 0; padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background: #FFFFFF;
+  }
+  .wrap { width: 100%; height: 100%; padding: 32pt 44pt; box-sizing: border-box; }
+  .hdr {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    padding-bottom: 10pt;
+    border-bottom: 2pt solid rgba(11,18,32,0.08);
+  }
+  h1 { margin: 0; font-size: 22pt; color: #0B1220; }
+  .sub p { margin: 0; font-size: 12pt; color: rgba(11,18,32,0.65); }
+
+  .layout { margin-top: 16pt; display: flex; gap: 18pt; }
+  .left { width: 42%; }
+  .right { width: 58%; }
+
+  .card {
+    background: #F6F8FC;
+    border: 1pt solid rgba(11,18,32,0.10);
+    border-radius: 14pt;
+    padding: 14pt 16pt;
+  }
+  .card h2 { margin: 0; font-size: 14pt; color: rgba(11,18,32,0.80); }
+  ul { margin: 10pt 0 0 18pt; padding: 0; }
+  li { font-size: 12.5pt; color: rgba(11,18,32,0.78); margin: 6pt 0; }
+
+  .chartWrap {
+    background: #FFFFFF;
+    border: 1pt solid rgba(11,18,32,0.10);
+    border-radius: 14pt;
+    padding: 10pt;
+    box-shadow: 0 10px 24px rgba(11,18,32,0.06);
+  }
+  .chartTitle p { margin: 0 0 8pt 0; font-size: 12.5pt; color: rgba(11,18,32,0.70); }
+  #segChart.placeholder {
+    width: 100%;
+    height: 250pt;
+    background: rgba(11,18,32,0.04);
+    border-radius: 10pt;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hdr">
+      <div><h1>Segment Results (Profit Before Tax)</h1></div>
+      <div class="sub"><p>Quarter ended 31 Dec 2025 • ₹ Lakhs</p></div>
+    </div>
+
+    <div class="layout">
+      <div class="left">
+        <div class="card">
+          <h2>Segments (as per RBI guidelines)</h2>
+          <ul>
+            <li>Treasury</li>
+            <li>Corporate / Wholesale Banking</li>
+            <li>Retail Banking (incl. Digital Banking)</li>
+            <li>Other Banking Operations</li>
+          </ul>
+        </div>
+        <div style="height: 12pt;"></div>
+        <div class="card">
+          <h2>Quarter PBT (selected)</h2>
+          <ul>
+            <li>Treasury: ₹ 8,138</li>
+            <li>Corporate/Wholesale: ₹ 11,518</li>
+            <li>Retail Banking: ₹ 25,683</li>
+            <li>Other Banking Ops: ₹ 5,053</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="chartWrap">
+          <div class="chartTitle"><p>Profit before tax by segment</p></div>
+          <div id="segChart" class="placeholder"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
